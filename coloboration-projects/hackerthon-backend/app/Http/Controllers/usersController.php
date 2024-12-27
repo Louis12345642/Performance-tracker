@@ -17,7 +17,7 @@ class usersController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created user in storage.
      */
     public function store(Request $request)
     {
@@ -47,7 +47,8 @@ class usersController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::find($id);
+        return $user;
     }
 
     /**
@@ -55,7 +56,22 @@ class usersController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+          //validated the attributes
+          $validate =$request->validate(
+            [
+                "firstName"=>"required",
+                 "secondName"=> "required",
+                "email"=> "required",
+                "rollNumber"=>"required",
+                "phone"=>"required",
+                "password"=>"required",
+
+            ]
+        );
+
+       $user= User::find($id)->update($validate);
+       return $user;
+
     }
 
     /**
@@ -63,6 +79,9 @@ class usersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+     //find the user using the id
+     $user = User::find($id);
+     //delete the user
+     $user->delete();
     }
 }
