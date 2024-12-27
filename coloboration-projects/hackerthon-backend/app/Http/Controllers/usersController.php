@@ -12,15 +12,8 @@ class usersController extends Controller
      */
     public function index()
     {
-
-        $users = [
-            [
-                "name"=>"kual"
-            ]
-            ];
-
-            return $users;
-
+         $users = User::all();
+        return $users;
     }
 
     /**
@@ -28,7 +21,25 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+     //validated the attributes
+        $validate =$request->validate(
+            [
+                "firstName"=>"required",
+                 "secondName"=> "required",
+                "email"=> "required",
+                "rollNumber"=>"required",
+                "phone"=>"required",
+                "password"=>"required",
+
+            ]
+        );
+
+        //store the users in the database
+        $user = User::create($validate);
+
+        return $user;
+
     }
 
     /**
