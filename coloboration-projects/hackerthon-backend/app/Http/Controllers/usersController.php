@@ -21,6 +21,8 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
+
+        //get all the user information from the request
         $user = [
             "name"=>$request->name,
             "secondtName" => $request->secondtName,
@@ -29,6 +31,10 @@ class usersController extends Controller
             "rollNumber"=>$request->rollNumber,
             "phone" => $request->phone
         ];
+
+        //create the user here
+
+        //check if all the fields are validated
 
         User::create($user);
         return $user;
@@ -50,20 +56,10 @@ class usersController extends Controller
      */
     public function update(Request $request, string $id)
     {
-          //validated the attributes
-          $validate =$request->validate(
-            [
-                "firstName"=>"required",
-                 "secondName"=> "required",
-                "email"=> "required",
-                "rollNumber"=>"required",
-                "phone"=>"required",
-                "password"=>"required",
+          //get all the user information from the request
 
-            ]
-        );
-
-       $user= User::find($id)->update($validate);
+       $user= User::find($id);
+       $user->update($request->all());
        return $user;
 
     }
