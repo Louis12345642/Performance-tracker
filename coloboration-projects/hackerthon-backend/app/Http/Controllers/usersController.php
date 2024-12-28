@@ -21,24 +21,18 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
+        $user = [
+            "name"=>$request->name,
+            "secondtName" => $request->secondtName,
+            "email"=>$request->email,
+            "password"=>$request->password,
+            "rollNumber"=>$request->rollNumber,
+            "phone" => $request->phone
+        ];
 
-     //validated the attributes
-        $validate =$request->validate(
-            [
-                "firstName"=>"required",
-                 "secondName"=> "required",
-                "email"=> "required",
-                "rollNumber"=>"required",
-                "phone"=>"required",
-                "password"=>"required",
-
-            ]
-        );
-
-        //store the users in the database
-        $user = User::create($validate);
-
+        User::create($user);
         return $user;
+
 
     }
 
