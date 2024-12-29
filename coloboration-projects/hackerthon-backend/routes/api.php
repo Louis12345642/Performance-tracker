@@ -5,6 +5,7 @@ use App\Http\Controllers\usersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -20,11 +21,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 
 Route::prefix('/users')->group(function(){
-    Route::get('/',[usersController::class,'index'])->name('user.all');
-    Route::post('/create',[usersController::class,'store'])->name('user.create');
-    Route::get('/{id}',[usersController::class,'show'])->name('show');
-    Route::put('/update/{id}',[usersController::class,'update'])->name('update');
-    Route::delete('/{id}',[usersController::class,'delete'])->name('delete');
+  require __DIR__.'/users/users.php';
 });
 
 /*
@@ -41,7 +38,12 @@ Route::prefix('/roles')->group(function(){
     Route::get('/{id}',[RoleController::class,'show'])->name('role.show');
     Route::delete('/{id}',[RoleController::class,'destroy'])->name('role.delete');
     Route::put('/{id}',[UsersController::class,'update'])->name("update");
+    Route::post("/assign-role",[RoleController::class,"assignRole"])->name("assign-role");
 
 });
+
+
+
+
 
 

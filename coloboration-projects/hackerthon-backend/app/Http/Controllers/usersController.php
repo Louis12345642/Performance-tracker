@@ -9,6 +9,8 @@ class usersController extends Controller
 {
     /**
      * Display a listing of the users from the database.
+     * methods: index() returns a listing of all users from the
+     *         database
      */
     public function index()
     {
@@ -32,7 +34,11 @@ class usersController extends Controller
             "phone" => $request->phone
         ];
 
+        //TODO
+          //implement the validation of the user
+
         //create the user here
+
 
         //check if all the fields are validated
 
@@ -72,6 +78,6 @@ class usersController extends Controller
      //find the user using the id
      $user = User::find($id);
      //delete the user
-     $user->delete();
+     $user->destroy();
     }
 }

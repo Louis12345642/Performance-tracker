@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
 use App\Models\Role;
+use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
@@ -22,7 +23,12 @@ class RoleController extends Controller
      */
     public function store(StoreRoleRequest $request)
     {
-        $role = $request->validate();
+
+        //TODO validating the user input for role title
+        $role = [
+            "title" => $request->title
+        ];
+
         Role::create($role);
 
         return $role;
@@ -61,5 +67,26 @@ class RoleController extends Controller
     {
         Role::destroy($id);
         return $role;
+    }
+
+
+       /**
+     * assigns a role to the user by inserting and attacching user_is
+     *  to role_id in the pivot table
+     */
+    public function assignRole(Request $request)
+    {
+
+        //get all the request information
+       $role_id = $request->role_id;
+       $user_id = $request->user_id;
+
+     //attach the user to the role
+
+       return[
+        "user_id"=>$user_id,
+        "role_id"=>$role_id
+
+       ];
     }
 }

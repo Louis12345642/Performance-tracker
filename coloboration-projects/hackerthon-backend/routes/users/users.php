@@ -1,12 +1,16 @@
 <?php
+use App\Http\Controllers\usersController;
+use Illuminate\Support\Facades\Route;
 
 
-//this routes is used for all users from the database
+Route::get('/',[usersController::class,'index'])->name('user.all');
+Route::post('/create',[usersController::class,'store'])->name('user.create');
+Route::get('/{id}',[usersController::class,'show'])->name('show');
+Route::put('/update/{id}',[usersController::class,'update'])->name('update');
+Route::delete('/delete/{id}',[usersController::class,'delete'])->name('delete');
 
-use Illuminate\Routing\Route;
 
-Route::get("/users",function(){
-return [
-    "name" =>"john doe"
-];
-});
+
+
+
+
