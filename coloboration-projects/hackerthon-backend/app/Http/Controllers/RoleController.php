@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
 use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -81,6 +82,8 @@ class RoleController extends Controller
        $user_id = $request->user_id;
 
      //attach the user to the role
+     $user =User::find($user_id);
+     $user->roles()->attach($role_id);
 
        return[
         "user_id"=>$user_id,

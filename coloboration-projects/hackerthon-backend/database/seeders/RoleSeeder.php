@@ -14,6 +14,7 @@ class RoleSeeder extends Seeder
     {
         $this->call([
             RoleSeeder::class
+
         ]);
     }
 }

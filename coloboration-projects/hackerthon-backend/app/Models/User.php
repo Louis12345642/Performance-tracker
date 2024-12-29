@@ -31,6 +31,15 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+
+       /**
+     *  Create many to many relationship to attach the user to role
+     *
+     */
+    public function roles(){
+        return $this->belongsToMany(Role::class);
+    }
     protected $hidden = [
         'password',
         'remember_token',
