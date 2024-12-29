@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\usersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,12 +31,7 @@ Route::prefix('/users')->group(function(){
 */
 
 Route::prefix('/roles')->group(function(){
-    Route::get('/',[RoleController::class,'index'])->name('role.all');
-    Route::post('/create',[RoleController::class,'store'])->name('role.create');
-    Route::get('/{id}',[RoleController::class,'show'])->name('role.show');
-    Route::delete('/{id}',[RoleController::class,'destroy'])->name('role.delete');
-    Route::put('update/{id}',[RoleController::class,'update'])->name("update");
-    Route::post("/assign-role",[RoleController::class,"assignRole"])->name("assign-role");
+    require __DIR__.'/roles/roles.php';
 
 });
 
