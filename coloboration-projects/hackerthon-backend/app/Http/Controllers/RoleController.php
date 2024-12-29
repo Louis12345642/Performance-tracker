@@ -55,7 +55,6 @@ class RoleController extends Controller
           $role = Role::find($id);
           //update the route
           $role->update($request->all());
-
           return $role;
 
     }
