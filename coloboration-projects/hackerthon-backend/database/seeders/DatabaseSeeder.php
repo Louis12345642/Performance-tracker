@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Course;
 use App\Models\Role;
 use App\Models\User;
 use Database\Factories\RoleFactory;
@@ -18,7 +19,8 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory(10)->create();
-            Role::factory(10)->create();
+        Role::factory(10)->create();
+        Course::factory(10)->create();
 
     }
 }

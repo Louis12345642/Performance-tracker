@@ -17,7 +17,11 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+           "title"=> fake()->name(),
+           "catOne"=>fake()->randomNumber(),
+           "catTwo"=>fake()->randomNumber(),
+           "Fat"=>fake()->randomNumber(),
+           "total"=>fake()->randomNumber(),
         ];
     }
 }
