@@ -40,6 +40,20 @@ class User extends Authenticatable
     public function roles(){
         return $this->belongsToMany(Role::class);
     }
+
+
+
+
+       /**
+     *  Create many to many relationship to attach the user to course
+     *
+     */
+    public function courses(){
+     return $this->belongsToMany(Course::class);
+    }
+
+
+
     protected $hidden = [
         'password',
         'remember_token',
