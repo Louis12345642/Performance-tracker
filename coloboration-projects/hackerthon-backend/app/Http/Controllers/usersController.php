@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -79,5 +80,22 @@ class usersController extends Controller
      $user = User::find($id);
      //delete the user
      $user->destroy();
+    }
+
+        /**
+        * assigns a course to a user.
+     */
+    public function assignCourse(Request $request)
+    {
+     $user_id =$request->user_id;
+     $course_id =$request->course_id;
+
+     $user = User::find($user_id);
+     $user->courses()->attach($course_id);
+
+     return [
+        "user_id"=> $user_id,
+        "course_id"=> $course_id
+     ];
     }
 }

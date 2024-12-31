@@ -47,4 +47,12 @@ class CourseController extends Controller
     {
         //
     }
+    public function userCourses($id)
+    {
+        
+        $courses = User::find($id)->courses();
+        return $courses;
+    
+        
+    }
 }
