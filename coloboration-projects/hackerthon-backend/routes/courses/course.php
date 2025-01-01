@@ -8,5 +8,5 @@ use Illuminate\Support\Facades\Route;
 Route::get("/user",[CourseController::class,'userCourses'])->name('user.courses');
 Route::get('/assigment/{id}',[AssigmentController::class,'userAssigment'])->name('user.assigments');
 Route::get('/students',[usersController::class,'courseStudents'])->name('course.users');
-Route::get('assigment/submit',AssigmentController::class,'submitAssigment')->name('assigment.submit');
+Route::put('/assigment/submit/{assigment_id}',[AssigmentController::class,'submitAssigment'])->name('assigment.submit');
 

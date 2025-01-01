@@ -1,0 +1,667 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "712b3e2d-fae2-425f-9e2a-d4f10e406890",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the users from the database.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "methods: index() returns a listing of all users from the\n        database",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"name\":\"Mr. Isadore Bogan V\",\"secondtName\":\"Steve Prosacco\",\"phone\":\"203-703-1808\",\"rollNumber\":\"1-630-229-0398\",\"email\":\"demond.cole@example.com\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":2,\"name\":\"Mrs. Lenna Rodriguez\",\"secondtName\":\"Esmeralda Hammes Sr.\",\"phone\":\"+1.657.961.2093\",\"rollNumber\":\"+1-781-521-7094\",\"email\":\"bernie.koepp@example.net\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":3,\"name\":\"Miss Lera Kovacek\",\"secondtName\":\"Elaina Lynch\",\"phone\":\"234.625.2542\",\"rollNumber\":\"+13516367943\",\"email\":\"block.christian@example.net\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":4,\"name\":\"Shanny Stehr\",\"secondtName\":\"Vincenzo Legros\",\"phone\":\"1-513-854-9706\",\"rollNumber\":\"+1-469-402-7356\",\"email\":\"baylee80@example.net\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":5,\"name\":\"Joseph Torphy\",\"secondtName\":\"Astrid Hahn II\",\"phone\":\"213-493-4438\",\"rollNumber\":\"(828) 884-0711\",\"email\":\"eldora35@example.org\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":6,\"name\":\"Cristian Hintz\",\"secondtName\":\"Ms. Jalyn Hoeger\",\"phone\":\"+1.302.975.6395\",\"rollNumber\":\"680.854.5312\",\"email\":\"khyatt@example.com\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":7,\"name\":\"Mr. Xzavier Connelly DDS\",\"secondtName\":\"Delta Hauck\",\"phone\":\"(520) 359-1451\",\"rollNumber\":\"+1-786-466-8628\",\"email\":\"melvina97@example.org\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":8,\"name\":\"Florencio Hoeger\",\"secondtName\":\"Arielle Rice V\",\"phone\":\"+1 (415) 646-7274\",\"rollNumber\":\"1-920-422-4145\",\"email\":\"whill@example.net\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":9,\"name\":\"Kaden Grant\",\"secondtName\":\"Raymond Considine DVM\",\"phone\":\"+1.909.822.0404\",\"rollNumber\":\"+17048826278\",\"email\":\"fisher.dayana@example.net\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":10,\"name\":\"Camren Bechtelar I\",\"secondtName\":\"Mrs. Petra Beier DVM\",\"phone\":\"+15643316180\",\"rollNumber\":\"1-678-721-1777\",\"email\":\"jkuphal@example.com\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created user in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"name\":\"Mr. Isadore Bogan V\",\"secondtName\":\"Steve Prosacco\",\"phone\":\"203-703-1808\",\"rollNumber\":\"1-630-229-0398\",\"email\":\"demond.cole@example.com\",\"email_verified_at\":\"2025-01-01T18:49:58.000000Z\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/update\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/update\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "aut",
+                                    "description": "The ID of the update."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "assigns a course to a user.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/assign-course",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/assign-course"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":1,\"title\":\"Mr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":2,\"title\":\"Dr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":3,\"title\":\"Prof.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":4,\"title\":\"Mrs.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":5,\"title\":\"Dr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":6,\"title\":\"Dr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":7,\"title\":\"Dr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":8,\"title\":\"Mrs.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":9,\"title\":\"Dr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"},{\"id\":10,\"title\":\"Miss\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"esse\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"title\":\"Mr.\",\"created_at\":\"2025-01-01T18:49:58.000000Z\",\"updated_at\":\"2025-01-01T18:49:58.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/update\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/update\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the update."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "assigns a role to the user by inserting and attacching user_is\n to role_id in the pivot table",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/assign-role",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/assign-role"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/courses\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/courses\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/courses\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/courses\/students",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/courses\/students",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/courses\/students"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "submits the assigment to of the user by making the stutus to true.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/courses\/assigment\/submit\/:assigment_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/courses\/assigment\/submit\/:assigment_id",
+                            "variable": [
+                                {
+                                    "id": "assigment_id",
+                                    "key": "assigment_id",
+                                    "value": "dolorem",
+                                    "description": "The ID of the assigment."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

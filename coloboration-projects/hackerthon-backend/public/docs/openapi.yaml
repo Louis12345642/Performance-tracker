@@ -1,0 +1,493 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/users:
+    get:
+      summary: 'Display a listing of the users from the database.'
+      operationId: displayAListingOfTheUsersFromTheDatabase
+      description: "methods: index() returns a listing of all users from the\n        database"
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: 'Mr. Isadore Bogan V'
+                    secondtName: 'Steve Prosacco'
+                    phone: 203-703-1808
+                    rollNumber: 1-630-229-0398
+                    email: demond.cole@example.com
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 2
+                    name: 'Mrs. Lenna Rodriguez'
+                    secondtName: 'Esmeralda Hammes Sr.'
+                    phone: +1.657.961.2093
+                    rollNumber: +1-781-521-7094
+                    email: bernie.koepp@example.net
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 3
+                    name: 'Miss Lera Kovacek'
+                    secondtName: 'Elaina Lynch'
+                    phone: 234.625.2542
+                    rollNumber: '+13516367943'
+                    email: block.christian@example.net
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 4
+                    name: 'Shanny Stehr'
+                    secondtName: 'Vincenzo Legros'
+                    phone: 1-513-854-9706
+                    rollNumber: +1-469-402-7356
+                    email: baylee80@example.net
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 5
+                    name: 'Joseph Torphy'
+                    secondtName: 'Astrid Hahn II'
+                    phone: 213-493-4438
+                    rollNumber: '(828) 884-0711'
+                    email: eldora35@example.org
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 6
+                    name: 'Cristian Hintz'
+                    secondtName: 'Ms. Jalyn Hoeger'
+                    phone: +1.302.975.6395
+                    rollNumber: 680.854.5312
+                    email: khyatt@example.com
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 7
+                    name: 'Mr. Xzavier Connelly DDS'
+                    secondtName: 'Delta Hauck'
+                    phone: '(520) 359-1451'
+                    rollNumber: +1-786-466-8628
+                    email: melvina97@example.org
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 8
+                    name: 'Florencio Hoeger'
+                    secondtName: 'Arielle Rice V'
+                    phone: '+1 (415) 646-7274'
+                    rollNumber: 1-920-422-4145
+                    email: whill@example.net
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 9
+                    name: 'Kaden Grant'
+                    secondtName: 'Raymond Considine DVM'
+                    phone: +1.909.822.0404
+                    rollNumber: '+17048826278'
+                    email: fisher.dayana@example.net
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 10
+                    name: 'Camren Bechtelar I'
+                    secondtName: 'Mrs. Petra Beier DVM'
+                    phone: '+15643316180'
+                    rollNumber: 1-678-721-1777
+                    email: jkuphal@example.com
+                    email_verified_at: '2025-01-01T18:49:58.000000Z'
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+      tags:
+        - Endpoints
+      security: []
+  /api/users/create:
+    post:
+      summary: 'Store a newly created user in storage.'
+      operationId: storeANewlyCreatedUserInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: 'Mr. Isadore Bogan V'
+                  secondtName: 'Steve Prosacco'
+                  phone: 203-703-1808
+                  rollNumber: 1-630-229-0398
+                  email: demond.cole@example.com
+                  email_verified_at: '2025-01-01T18:49:58.000000Z'
+                  created_at: '2025-01-01T18:49:58.000000Z'
+                  updated_at: '2025-01-01T18:49:58.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: 'Mr. Isadore Bogan V'
+                  secondtName:
+                    type: string
+                    example: 'Steve Prosacco'
+                  phone:
+                    type: string
+                    example: 203-703-1808
+                  rollNumber:
+                    type: string
+                    example: 1-630-229-0398
+                  email:
+                    type: string
+                    example: demond.cole@example.com
+                  email_verified_at:
+                    type: string
+                    example: '2025-01-01T18:49:58.000000Z'
+                  created_at:
+                    type: string
+                    example: '2025-01-01T18:49:58.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2025-01-01T18:49:58.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/users/update/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the update.'
+        example: aut
+        required: true
+        schema:
+          type: string
+  /api/users/assign-course:
+    post:
+      summary: 'assigns a course to a user.'
+      operationId: assignsACourseToAUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/roles:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    title: Mr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 2
+                    title: Dr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 3
+                    title: Prof.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 4
+                    title: Mrs.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 5
+                    title: Dr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 6
+                    title: Dr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 7
+                    title: Dr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 8
+                    title: Mrs.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 9
+                    title: Dr.
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+                  -
+                    id: 10
+                    title: Miss
+                    created_at: '2025-01-01T18:49:58.000000Z'
+                    updated_at: '2025-01-01T18:49:58.000000Z'
+      tags:
+        - Endpoints
+      security: []
+  /api/roles/create:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: esse
+                  nullable: false
+              required:
+                - title
+      security: []
+  '/api/roles/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  title: Mr.
+                  created_at: '2025-01-01T18:49:58.000000Z'
+                  updated_at: '2025-01-01T18:49:58.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  title:
+                    type: string
+                    example: Mr.
+                  created_at:
+                    type: string
+                    example: '2025-01-01T18:49:58.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2025-01-01T18:49:58.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the role.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/roles/update/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the update.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/roles/assign-role:
+    post:
+      summary: "assigns a role to the user by inserting and attacching user_is\n to role_id in the pivot table"
+      operationId: assignsARoleToTheUserByInsertingAndAttacchingUserIsToRoleIdInThePivotTable
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/courses/user:
+    get:
+      summary: ''
+      operationId: getApiCoursesUser
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+  /api/courses/students:
+    get:
+      summary: ''
+      operationId: getApiCoursesStudents
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+  '/api/courses/assigment/submit/{assigment_id}':
+    put:
+      summary: 'submits the assigment to of the user by making the stutus to true.'
+      operationId: submitsTheAssigmentToOfTheUserByMakingTheStutusToTrue
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: assigment_id
+        description: 'The ID of the assigment.'
+        example: dolorem
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''
