@@ -98,4 +98,19 @@ class usersController extends Controller
         "course_id"=> $course_id
      ];
     }
+
+
+
+       /**
+     * get the role of a specific user
+     *
+     */
+    public function getRoles($id){
+        $user = User::find($id);
+        $roles = $user->roles;
+
+        return $roles;
+
+    }
+
 }
