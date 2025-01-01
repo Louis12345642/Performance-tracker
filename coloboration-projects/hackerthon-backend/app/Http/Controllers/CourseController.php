@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Course;
+use App\Models\User;
 
 class CourseController extends Controller
 {
@@ -49,10 +50,10 @@ class CourseController extends Controller
     }
     public function userCourses($id)
     {
-        
-        $courses = User::find($id)->courses();
+
+        $courses = User::find($id)->courses;
         return $courses;
-    
-        
+
+
     }
 }

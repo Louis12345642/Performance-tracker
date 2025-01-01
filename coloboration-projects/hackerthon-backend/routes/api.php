@@ -44,7 +44,7 @@ Route::prefix('/roles')->group(function(){
 */
 
 Route::prefix('courses')->group(function(){
-    require __DIR__.'courses/course.php';
+    require __DIR__.'/courses/course.php';
 });
 
 
