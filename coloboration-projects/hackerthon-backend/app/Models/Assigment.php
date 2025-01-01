@@ -9,4 +9,15 @@ class Assigment extends Model
 {
     /** @use HasFactory<\Database\Factories\AssigmentFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'status',
+        'totalMarks',
+        'marksObtain'
+    ];
+
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
 }

@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('assigments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
             $table->string('title');
+            $table->boolean('status')->default(false);
             $table->integer('marksObtain');
             $table->integer('totalMarks');
             $table->timestamps();
