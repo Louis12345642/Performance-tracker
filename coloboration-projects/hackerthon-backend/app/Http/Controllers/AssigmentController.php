@@ -5,9 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAssigmentRequest;
 use App\Http\Requests\UpdateAssigmentRequest;
 use App\Models\Assigment;
+use App\Models\Course;
 
 class AssigmentController extends Controller
 {
+
+    /**
+     * Display all the assigments of a user for a specific course.
+     */
+
+     public function userAssigments($course_id){
+        $assigments = Course::find($course_id)->assigments;
+        return $assigments;
+     }
+
+
     /**
      * Display a listing of the resource.
      */

@@ -99,6 +99,11 @@ class usersController extends Controller
      ];
     }
 
+    public function courseStudents($course_id){
+        $users = Course::find($course_id)->users;
+        return $users;
+    }
+
 
 
        /**
