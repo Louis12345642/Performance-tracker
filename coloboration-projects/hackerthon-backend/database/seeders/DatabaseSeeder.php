@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Assigment;
 use App\Models\Course;
 use App\Models\Role;
 use App\Models\User;
@@ -16,11 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory(10)->create();
         Role::factory(10)->create();
         Course::factory(10)->create();
-
+        Assigment::factory(10)->create();
     }
 }

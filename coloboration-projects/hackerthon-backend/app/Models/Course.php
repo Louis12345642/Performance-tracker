@@ -19,4 +19,9 @@ class Course extends Model
     public function users(){
         return $this->belongsToMany(User::class);
     }
+
+    //create a relationship to get the assigmnet of the course
+    public function assigments(){
+        return $this->hasMany(Assigment::class);
+    }
 }

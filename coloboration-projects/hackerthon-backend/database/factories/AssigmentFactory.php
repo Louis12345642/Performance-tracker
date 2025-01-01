@@ -17,7 +17,13 @@ class AssigmentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+
+            "title"=>fake()->name(),
+            "course_id"=>1,
+            "status"=>fake()->boolean(1),
+            "marksObtain"=>(int)rand(1,10),
+            "totalMarks"=>(int)rand(1,10)
+
         ];
     }
 }
