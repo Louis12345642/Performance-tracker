@@ -6,6 +6,7 @@ use App\Http\Requests\StoreAssigmentRequest;
 use App\Http\Requests\UpdateAssigmentRequest;
 use App\Models\Assigment;
 use App\Models\Course;
+use Illuminate\Http\Request;
 
 class AssigmentController extends Controller
 {
@@ -18,6 +19,24 @@ class AssigmentController extends Controller
         $assigments = Course::find($course_id)->assigments;
         return $assigments;
      }
+
+       /**
+        * submits the assigment to of the user by making the stutus to true.
+
+     */
+
+     public function submitAssigment( Request $request,$assigment_id){
+        $assigment = Assigment::find($assigment_id);
+        $updated =[
+          "status"=>$request->status
+        ];
+
+        $assigment->update($updated);
+        $assigment->save();
+
+     }
+
+
 
 
     /**
