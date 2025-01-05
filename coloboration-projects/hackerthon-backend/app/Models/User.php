@@ -40,17 +40,25 @@ class User extends Authenticatable
     public function roles(){
         return $this->belongsToMany(Role::class);
     }
-
-
-
-
        /**
      *  Create many to many relationship to attach the user to course
      *
      */
-    public function courses(){
+    public function doctors(){
      return $this->belongsToMany(Course::class);
     }
+
+
+
+       /**
+     *  create one to many relation between user
+     *
+     */
+
+    public function courses(){
+        return $this->belongsToMany(Course::class);
+       }
+
 
 
 
