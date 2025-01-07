@@ -19,7 +19,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             'stripe/*',
             'http://localhost:8000/register',
-        
+            'http://localhost:8000/login'
+
         ]);
 
         $middleware->alias([
