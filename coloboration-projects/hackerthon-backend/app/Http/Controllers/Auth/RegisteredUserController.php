@@ -32,7 +32,6 @@ class RegisteredUserController extends Controller
             'lastName'=>$request->secondtName,
             'rollNumber'=> $request->rollNumber,
             'phone'=>$request->phone,
-            'doctor_id'=>$request->doctor_id,
             'email' => $request->email,
             'password' => Hash::make($request->string('password')),
         ]);
