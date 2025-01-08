@@ -28,8 +28,8 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
 
-            'name' => $request->name,
-            'secondtName'=>$request->secondtName,
+            'firstName' => $request->name,
+            'lastName'=>$request->secondtName,
             'rollNumber'=> $request->rollNumber,
             'phone'=>$request->phone,
             'doctor_id'=>$request->doctor_id,
