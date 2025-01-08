@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('doctor_id');
-            $table->string('name');
-            $table->string('secondtName');
+            $table->string('firstName');
+            $table->string('lastName');
             $table->string('phone');
             $table->string('rollNumber');
             $table->string('email')->unique();

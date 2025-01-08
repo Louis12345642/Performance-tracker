@@ -10,11 +10,15 @@ use App\Models\User;
 class CourseController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the courses in the database.
      */
     public function index()
     {
-     return Course::all();
+
+        $courses = Course::all();
+
+        return $courses;
+
     }
 
     /**
@@ -22,7 +26,16 @@ class CourseController extends Controller
      */
     public function store(StoreCourseRequest $request)
     {
-        //
+        $course = [
+            "title"=>$request->title,
+            "catOne" =>$request->catOne,
+            "catTwo"=> $request->catTwo,
+            "Fat"=> $request->Fat
+
+        ];
+
+        Course::create($course);
+
     }
 
     /**
@@ -30,7 +43,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        
     }
 
     /**
