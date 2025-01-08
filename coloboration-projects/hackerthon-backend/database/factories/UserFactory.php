@@ -25,6 +25,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'doctor_id'=>1,
             'secondtName'=>fake()->name(),
             'rollNumber'=>fake()->phoneNumber(),
             'phone'=>fake()->phoneNumber(),
