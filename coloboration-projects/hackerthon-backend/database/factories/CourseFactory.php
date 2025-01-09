@@ -18,6 +18,7 @@ class CourseFactory extends Factory
     {
         return [
            "title"=> fake()->name(),
+           "description"=>fake()->paragraph(),
            "catOne"=>fake()->randomNumber(),
            "catTwo"=>fake()->randomNumber(),
            "Fat"=>fake()->randomNumber(),
