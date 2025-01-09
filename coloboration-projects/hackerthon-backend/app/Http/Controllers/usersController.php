@@ -5,9 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class usersController extends Controller
 {
+
+    /**
+     * methods: authUser returns an array of the authenicated  from the
+     * database
+     */
+    public function authuserinfo()
+    {
+
+        $user = Auth::user();
+      return $user;
+    }
+
+
+
+
+
     /**
      * Display a listing of the users from the database.
      * methods: index() returns a listing of all users from the

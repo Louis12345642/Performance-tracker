@@ -9,8 +9,7 @@ Route::get('/{id}',[usersController::class,'show'])->name('show');
 Route::put('/update/{id}',[usersController::class,'update'])->name('update');
 Route::delete('/delete/{id}',[usersController::class,'delete'])->name('delete');
 Route::post('/assign-course',[usersController::class,'assignCourse'])->name('user.assignCourse');
-
-
+Route::get('/authuser',[usersController::class,'authuserinfo'])->name('authUser');
 
 
 

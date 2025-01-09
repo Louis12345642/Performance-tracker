@@ -41,7 +41,7 @@ class AssigmentController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

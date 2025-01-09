@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\usersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -48,8 +47,6 @@ Route::prefix('/roles')->group(function(){
 Route::prefix('courses')->group(function(){
     require __DIR__.'/courses/course.php';
 });
-
-Route::get('/auth-user',[usersController::class,'authuserinfo'])->name('user.auth.info');
 
 
 

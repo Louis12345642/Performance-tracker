@@ -21,15 +21,17 @@ class CoursePolicy
      */
     public function view(?User $user, Course $course): bool
     {
+
         return true;
     }
-
     /**
      * Determine whether the user can create models.
      */
     public function create(?User $user): bool
     {
-
+        //get the role of the user
+        //if the user is admin
+        //allow them to create notes
         return true;
     }
 

@@ -26,8 +26,7 @@ class RegisteredUserController extends Controller
         //     'password' => ['required', Rules\Password::defaults()],
         // ]);
 
-        $user = User::create([
-
+            $user = User::create([
             'firstName' => $request->firstName,
             'lastName'=>$request->lastName,
             'rollNumber'=> $request->rollNumber,
