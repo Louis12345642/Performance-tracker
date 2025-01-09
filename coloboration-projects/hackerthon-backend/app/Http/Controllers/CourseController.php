@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCourseRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Course;
 use App\Models\User;
 
 class CourseController extends Controller
 {
+    use AuthorizesRequests;
     /**
      * Display a listing of the courses in the database.
      */
@@ -42,7 +44,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        
+
     }
 
     /**
@@ -60,11 +62,25 @@ class CourseController extends Controller
     {
         //
     }
-    public function userCourses($id)
+
+
+      /**
+     * return all the courses that belongs to a specific user.
+     */
+    public function userCourses($id, User $user, Course $course)
     {
 
+
+
         $courses = User::find($id)->courses;
+
+        $this->authorize('view', $course);
+
+
         return $courses;
+
+
+
 
 
     }

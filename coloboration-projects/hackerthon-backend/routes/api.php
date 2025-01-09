@@ -35,6 +35,7 @@ Route::prefix('/roles')->group(function(){
 
 });
 
+
 /*
 * prefix:(courses);
 *   the roles prefix is used to add courses phrase in each api call of the courses
