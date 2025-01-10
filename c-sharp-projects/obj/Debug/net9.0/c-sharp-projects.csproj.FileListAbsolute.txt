@@ -1,0 +1,14 @@
+/Users/mubarakkual/software-development/c-sharp-projects/bin/Debug/net9.0/c-sharp-projects
+/Users/mubarakkual/software-development/c-sharp-projects/bin/Debug/net9.0/c-sharp-projects.deps.json
+/Users/mubarakkual/software-development/c-sharp-projects/bin/Debug/net9.0/c-sharp-projects.runtimeconfig.json
+/Users/mubarakkual/software-development/c-sharp-projects/bin/Debug/net9.0/c-sharp-projects.dll
+/Users/mubarakkual/software-development/c-sharp-projects/bin/Debug/net9.0/c-sharp-projects.pdb
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.AssemblyInfoInputs.cache
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.AssemblyInfo.cs
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.csproj.CoreCompileInputs.cache
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.dll
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/refint/c-sharp-projects.dll
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.pdb
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/c-sharp-projects.genruntimeconfig.cache
+/Users/mubarakkual/software-development/c-sharp-projects/obj/Debug/net9.0/ref/c-sharp-projects.dll

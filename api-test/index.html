@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+const token = 'eyJpdiI6InBDUVozSFo5QTNkc0VXUlhpdW12Unc9PSIsInZhbHVlIjoib0dXZDBPdWlvazFOcDJuaGg3V0VpcmlPVHkrRjRJRHZMMTRLMUl3QmZxaTFGMnFuV3YwcXRRcTJtMnRIYkN5NXZITmxsZXlXUW5qSDFxdkx0SXo2U3o1VnBDeU5hNmJDWW9aSXNTUldLdURWME1wOGlmanUwc2NKb3owK0xkUHgiLCJtYWMiOiI4NWNiM2IwOTc3NWEzNGQwMGJiOTE4MmU5NTViYjk1NTBjMmYxYjM5ZTkzMDZjZTJiMGFhMDMxMjQ3ZDgxN2VmIiwidGFnIjoiIn0%3D'; // Replace with your actual token
+
+fetch('http://localhost:8000/api/auth-user', {
+    method: 'GET', // HTTP method
+    headers: {
+        'Authorization': `Bearer ${token}`, // Include the token
+        'Content-Type': 'application/json', // Specify the content type
+    }
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response Data:', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
+
+      </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -10,4 +10,5 @@ Route::get('/assigment/{id}',[AssigmentController::class,'userAssigment'])->name
 Route::get('/students',[usersController::class,'courseStudents'])->name('course.users');
 Route::put('/assigment/submit/{assigment_id}',[AssigmentController::class,'submitAssigment'])->name('assigment.submit');
 Route::get('/',[CourseController::class,'index'])->name('course.index');
+Route::delete('/delete/{id}',[CourseController::class,'destroy'])->name('course.delete');
 
