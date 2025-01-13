@@ -17,7 +17,7 @@ class CourseController extends Controller
     public function index()
     {
 
-        $courses = Course::all();
+        $courses = Course::with('assigments')->get();
 
         return $courses;
 
@@ -43,9 +43,13 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Course $course)
+    public function show(Course $course ,$id)
     {
+        //find the coirse
+        $course = $course->with('assigments')->find($id);
+
         return $course;
+       
 
     }
 
