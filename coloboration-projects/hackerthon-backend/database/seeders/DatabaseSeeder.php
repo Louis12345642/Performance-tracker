@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Assigment;
 use App\Models\Course;
+use App\Models\Doctor;
 use App\Models\Role;
 use App\Models\User;
 use Database\Factories\RoleFactory;
@@ -21,5 +22,6 @@ class DatabaseSeeder extends Seeder
         Role::factory(10)->create();
         Course::factory(10)->create();
         Assigment::factory(10)->create();
+        Doctor::factory(10)->create();
     }
 }

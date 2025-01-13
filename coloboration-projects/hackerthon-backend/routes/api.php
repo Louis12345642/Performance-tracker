@@ -61,6 +61,19 @@ Route::prefix('assigments')->group(function(){
     require __DIR__.'/assigment/assigment.php';
 });
 
+/*
+* prefix:(doctor);
+*   the roles prefix is used to add doctor phrase in each api call of the doctor
+* group():
+*   the function is used for grouping all the routes related to the doctor
+*
+*/
+
+Route::prefix('doctor')->group(function(){
+   require __DIR__.'/doctor/doctor.php';
+}
+);
+
 
 Route::get('/auth-user',[usersController::class,'authuserinfo'])->name('user.auth.info');
 

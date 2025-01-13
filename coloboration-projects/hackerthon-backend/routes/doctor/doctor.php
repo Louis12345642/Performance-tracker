@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/',[DoctorController::class,'index'])->name('doctor.index');
 Route::get('/{id}',[DoctorController::class,'show'])->name('doctor.show');

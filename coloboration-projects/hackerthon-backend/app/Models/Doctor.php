@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Doctor extends Model
 {
+    protected $fillable =[
+        'name',
+        'specialization'
+
+    ];
     /** @use HasFactory<\Database\Factories\DoctorFactory> */
     use HasFactory;
 }
