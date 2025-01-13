@@ -14,13 +14,16 @@ class CourseController extends Controller
     /**
      * Display a listing of the courses in the database.
      */
-    public function index()
-    {
+    public function index(){
         $courses = Course::with('assigments')->get();
 
         return $courses;
 
+
     }
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -42,9 +45,13 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Course $course)
+    public function show(Course $course ,$id)
     {
+        //find the coirse
+        $course = $course->with('assigments')->find($id);
+
         return $course;
+
 
     }
 
