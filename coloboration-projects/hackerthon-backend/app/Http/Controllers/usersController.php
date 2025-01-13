@@ -17,7 +17,7 @@ class usersController extends Controller
     public function authuserinfo()
     {
 
-        $user = Auth::user();
+     $user = Auth::user();
       return $user;
     }
 

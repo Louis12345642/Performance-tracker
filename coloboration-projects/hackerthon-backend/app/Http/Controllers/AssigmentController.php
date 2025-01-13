@@ -41,7 +41,8 @@ class AssigmentController extends Controller
      */
     public function index()
     {
-        
+        $assigments = Assigment::all();
+        return $assigments;
     }
 
     /**
@@ -49,7 +50,16 @@ class AssigmentController extends Controller
      */
     public function store(StoreAssigmentRequest $request)
     {
-        //
+        $assigment = [
+            "title"=>$request->title,
+            "status"=>$request->status,
+            "marksObtain"=>$request->marksObtain
+
+        ];
+        Assigment::created($assigment);
+        return [
+            "message"=>"assigment created"
+        ];
     }
 
     /**
@@ -57,22 +67,33 @@ class AssigmentController extends Controller
      */
     public function show(Assigment $assigment)
     {
-        //
+        return $assigment;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAssigmentRequest $request, Assigment $assigment)
+    public function update(UpdateAssigmentRequest $request,$id)
     {
-        //
+        $assigment = Assigment::find($id);
+        $assigment->update($request->all());
+        return [
+            "message"=>"assigment updated"
+        ];
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Assigment $assigment)
+    public function destroy($id)
     {
-        //
+        $assigment = Assigment::find($id);
+        $assigment->delete();
+
+        return [
+            "message"=>"assigment deleted"
+        ];
+
     }
 }

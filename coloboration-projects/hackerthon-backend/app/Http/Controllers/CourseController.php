@@ -45,23 +45,35 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
+        return $course;
 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCourseRequest $request, Course $course)
+    public function update(UpdateCourseRequest $request, Course $course,$id)
     {
-        //
+
+        $course = $course->find($id);
+        $course->update($request->all());
+        return $course;
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Course $course)
+    public function destroy($id)
     {
-        //
+
+    //retrive
+    $course = Course::find($id);
+    //delete
+    $course->delete();
+    return [
+        "message"=>"course deleted"
+    ];
     }
 
 
