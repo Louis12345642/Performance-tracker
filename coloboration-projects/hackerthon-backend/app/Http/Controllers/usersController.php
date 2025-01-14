@@ -121,8 +121,6 @@ class usersController extends Controller
         return $users;
     }
 
-
-
        /**
      * get the role of a specific user
      *

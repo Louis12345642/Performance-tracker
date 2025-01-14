@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\profilePictureController;
 use App\Http\Controllers\usersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -73,6 +74,15 @@ Route::prefix('doctor')->group(function(){
    require __DIR__.'/doctor/doctor.php';
 }
 );
+
+
+
+//get the profile of the user
+
+Route::prefix('profile')->group(function(){
+    Route::post('/store/{id}',[profilePictureController::class,'storeProfile']);
+    Route::get('/show-profile',[profilePictureController::class,'show']);
+});
 
 
 Route::get('/auth-user',[usersController::class,'authuserinfo'])->name('user.auth.info');
