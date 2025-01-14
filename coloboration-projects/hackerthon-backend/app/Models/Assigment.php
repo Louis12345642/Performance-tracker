@@ -14,7 +14,8 @@ class Assigment extends Model
         'title',
         'status',
         'totalMarks',
-        'marksObtain'
+        'marksObtain',
+        'file'
     ];
 
     public function course(){

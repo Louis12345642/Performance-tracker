@@ -18,6 +18,7 @@ return new class extends Migration
             $table->boolean('status')->default(false);
             $table->integer('marksObtain');
             $table->integer('totalMarks');
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }

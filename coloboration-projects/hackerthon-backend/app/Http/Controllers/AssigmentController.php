@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateAssigmentRequest;
 use App\Models\Assigment;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AssigmentController extends Controller
 {
@@ -27,11 +28,21 @@ class AssigmentController extends Controller
 
      public function submitAssigment( Request $request,$assigment_id){
         $assigment = Assigment::find($assigment_id);
-        $updated =[
-          "status"=>$request->status
-        ];
 
-        $assigment->update($updated);
+        //get the file
+        $filePath = $request->file('file')->store('uploaded_files', 'public');
+
+
+
+
+
+        $assigment = Assigment::find($assigment_id);
+
+        //update the status of the assigment and upload the file
+        $assigment->status=true;
+        $assigment->file =Storage::disk('public')->url($filePath);
+        // $assigment_id->file=Storage::disk('public')->url($filePath);
+
         $assigment->save();
 
      }
