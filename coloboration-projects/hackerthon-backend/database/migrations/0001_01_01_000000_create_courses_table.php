@@ -20,6 +20,8 @@ return new class extends Migration
             $table->integer('catTwo');
             $table->integer('Fat');
             $table->integer('total');
+            $table->string('avater')->nullable();
+
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Course;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
 {
@@ -30,15 +31,27 @@ class CourseController extends Controller
      */
     public function store(StoreCourseRequest $request)
     {
+        //upload a course image here
+        $filePath = $request->file('file')->store('uploaded_files', 'public');
+        //get the file path and add it to the course
+
+
         $course = [
             "title"=>$request->title,
             "catOne" =>$request->catOne,
             "catTwo"=> $request->catTwo,
-            "Fat"=> $request->Fat
+            "Fat"=> $request->Fat,
+            "description"=>$request->description,
+            "total"=>$request->total,
+            "avater"=>Storage::disk('public')->url($filePath)
 
         ];
 
+
         Course::create($course);
+        return response()->json([
+            "message"=>"course created"
+        ]);
 
     }
 

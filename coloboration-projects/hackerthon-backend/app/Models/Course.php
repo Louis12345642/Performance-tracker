@@ -12,7 +12,7 @@ class Course extends Model
     /** @use HasFactory<\Database\Factories\CourseFactory> */
     use HasFactory;
 
-    protected $fillable = ['title','catOne','fat','catTwo','Fat','total','description'];
+    protected $fillable = ['title','catOne','fat','catTwo','Fat','total','description','avater','description'];
 
     //create the relationship between the user and courses
 

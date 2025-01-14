@@ -14,5 +14,7 @@ Route::get('/',[CourseController::class,'index'])->name('course.index');
 Route::delete('/delete/{id}',[CourseController::class,'destroy'])->name('course.delete');
 Route::put('/update',[CourseController::class,'update'])->name('course.update');
 Route::get('/{id}',[CourseController::class,'show'])->name('course.show');
+Route::post('/create',[CourseController::class,'store'])->name('course.store');
+
 
 
