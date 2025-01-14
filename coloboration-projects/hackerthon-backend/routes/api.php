@@ -81,7 +81,7 @@ Route::prefix('doctor')->group(function(){
 
 Route::prefix('profile')->group(function(){
     Route::post('/store/{id}',[profilePictureController::class,'storeProfile']);
-    Route::get('/show-profile',[profilePictureController::class,'show']);
+    Route::get('/show-profile/{id}',[profilePictureController::class,'show']);
 });
 
 

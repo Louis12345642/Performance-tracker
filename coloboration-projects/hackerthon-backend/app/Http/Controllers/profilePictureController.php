@@ -26,9 +26,11 @@ class profilePictureController extends Controller
     }
 
 
-    public function show(Request $request ,Storage $storage){
-        $fileUrl = Storage::disk('public')->url('uploaded_files/image.jpg');
-        return $fileUrl;
+    public function show(Request $request ,Storage $storage,$id){
+        //find the user from the database
+        $user = User::find($id);
+        $avater = $user->avater;
+        return $avater;
 
     }
 }
