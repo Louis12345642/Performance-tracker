@@ -15,7 +15,9 @@ class profilePictureController extends Controller
         //associate the user the avater
         $user = User::find($id);
 
-        dd($user);
+      //rewrite the user avater url
+        $user->avater =Storage::disk('public')->url('uploaded_files/image.jpg');
+        $user->save();
 
          // Return a response
          return response()->json([
