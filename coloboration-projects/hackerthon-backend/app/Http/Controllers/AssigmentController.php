@@ -82,7 +82,7 @@ class AssigmentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+ * Update the specified resource in storage.
      */
     public function update(UpdateAssigmentRequest $request,$id)
     {
