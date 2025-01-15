@@ -12,6 +12,8 @@ Route::post('/register', [RegisteredUserController::class, 'store'])
     ->middleware('guest')
     ->name('register');
 
+    Route::post('/storeProfile/{id}', [RegisteredUserController::class, 'storeProfile']);
+
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware('guest')
     ->name('login');

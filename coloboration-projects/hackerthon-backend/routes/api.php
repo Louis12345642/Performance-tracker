@@ -79,9 +79,12 @@ Route::prefix('doctor')->group(function(){
 
 //get the profile of the user
 
+
+
+
 Route::prefix('profile-image')->group(function(){
-    Route::post('/store/{id}',[profilePictureController::class,'storeProfile']);
-    Route::get('/show-profile/{id}',[profilePictureController::class,'show']);
+
+
 });
 
 

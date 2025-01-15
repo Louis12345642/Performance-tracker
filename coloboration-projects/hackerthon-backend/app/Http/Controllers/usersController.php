@@ -133,4 +133,33 @@ class usersController extends Controller
 
     }
 
+    
+
+    public function showProfile($id){
+        $user = User::find($id);
+        $avater = $user->avater;
+        return $avater;
+    }
+    
+
+
+
+
+
+    public function storeAvater(Request $request,$id){
+        //save the profile picture here
+        // $filePath = $request->file('file')->store('uploaded_files', 'public');
+
+        //associate the user the avater
+        $user = User::find($id);
+
+
+
+      //rewrite the user avater url
+        // $user->avater =Storage::disk('public')->url($filePath);
+        // $user->save();
+
+         // Return a response
+        return $request->all();
+    }
 }

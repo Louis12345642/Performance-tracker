@@ -10,14 +10,15 @@ class profilePictureController extends Controller
 {
     public function storeProfile(Request $request,$id){
         //save the profile picture here
-        $filePath = $request->file('file')->store('uploaded_files', 'public');
+        // $filePath = $request->file('file')->store('uploaded_files', 'public');
 
         //associate the user the avater
         $user = User::find($id);
+        dd($id);
 
       //rewrite the user avater url
-        $user->avater =Storage::disk('public')->url($filePath);
-        $user->save();
+        // $user->avater =Storage::disk('public')->url($filePath);
+        // $user->save();
 
          // Return a response
          return response()->json([
@@ -31,6 +32,5 @@ class profilePictureController extends Controller
         $user = User::find($id);
         $avater = $user->avater;
         return $avater;
-
     }
 }
