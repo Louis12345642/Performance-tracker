@@ -85,13 +85,10 @@ class DoctorController extends Controller
     {
         $doctor_id = $request->doctor_id;
         $user_id = $request->user_id;
-        //find the doctor
-        $doctor= $doctor->find($doctor_id);
         //find the user
         $user= $doctor->find($user_id);
-
         //book the user a doctor
-        $doctor->user_id = $user_id;
+        $user->doctor_id = $doctor_id;
 
 
     }
