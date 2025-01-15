@@ -7,3 +7,4 @@ Route::get('/',[DoctorController::class,'index'])->name('doctor.index');
 Route::get('/{id}',[DoctorController::class,'show'])->name('doctor.show');
 Route::put('/{id}',[DoctorController::class,'update'])->name('doctor.update');
 Route::delete('/{id}',[DoctorController::class,'destroy'])->name('doctor.delete');
+Route::post('/book-doctor',[DoctorController::class,'bookDoctor'])->name('doctor.book');

@@ -21,9 +21,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'http://localhost:8000/register',
             "http://localhost:8000/storeProfile/*",
             'http://localhost:8000/login',
-            'http://localhost:8000/profile-image/store/{id}'
-
-
+            'http://localhost:8000/profile-image/store/{id}',
+            'http://localhost:8000/api/*'
         ]);
 
         $middleware->alias([

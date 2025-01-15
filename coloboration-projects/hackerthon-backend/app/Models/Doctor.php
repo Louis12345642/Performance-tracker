@@ -12,6 +12,10 @@ class Doctor extends Model
         'specialization'
 
     ];
+
+    public function users(){
+        return $this->hasMany(Doctor::class);
+    }
     /** @use HasFactory<\Database\Factories\DoctorFactory> */
     use HasFactory;
 }

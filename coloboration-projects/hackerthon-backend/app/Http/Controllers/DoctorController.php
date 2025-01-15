@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDoctorRequest;
 use App\Http\Requests\UpdateDoctorRequest;
 use App\Models\Doctor;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
@@ -75,5 +75,21 @@ class DoctorController extends Controller
         return [
             'message'=>"doctor deleted successfully"
         ];
+    }
+
+
+       /**
+     *books a doctor to a specific user
+     */
+    public function bookDoctor(Doctor $doctor,Request $request)
+    {
+        $doctor_id = $request->doctor_id;
+        $user_id = $request->user_id;
+        //find the user
+        $user= $doctor->find($user_id);
+        //book the user a doctor
+        $user->doctor_id = $doctor_id;
+
+
     }
 }
