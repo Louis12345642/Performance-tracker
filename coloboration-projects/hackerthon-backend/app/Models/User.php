@@ -48,11 +48,11 @@ class User extends Authenticatable implements HasMedia
         return $this->belongsToMany(Role::class);
     }
        /**
-     *  Create many to many relationship to attach the user to course
+     *  Create many to many relationship to attach the user to doctor
      *
      */
-    public function doctors(){
-     return $this->belongsToMany(Course::class);
+    public function doctor(){
+     return $this->belongsTo(Doctor::class);
     }
 
 
